@@ -54,6 +54,11 @@
 
 .body__main_profile_content_picture{
     width: 110px;
+    animation: 1s zoom-in-out infinite ease;
+}
+
+.body__main_profile_content_picture:hover{
+    animation: 1s rotate_pic infinite ease;
 }
 
 .body__main_profile_content_name{
@@ -84,4 +89,26 @@
     border-radius: 5px;
     color: white;
     overflow: hidden; /*over flow*/
+}
+
+
+@keyframes rotate_pic {
+    0%{
+        transform: rotate3d(0, -1, 0, -1turn);
+    }
+    50%{
+        transform: none;
+    }
+    100%{
+        transform: none;
+    }
+}
+
+@keyframes zoom-in-out {
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(-2);
+    }
 }
